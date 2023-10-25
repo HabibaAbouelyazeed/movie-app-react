@@ -25,7 +25,7 @@ function NavBar() {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" color="info" className="app-navBar">
       <Container width="xl">
         <Toolbar disableGutters>
           <Link to="/" >
@@ -42,7 +42,7 @@ function NavBar() {
                 color: "white",
                 textDecoration: "none",
               }}>
-              MOVIE-DB
+              <img src="../../logo.svg" alt="logo" style={{width:"100%", height:"auto"}}/>
             </Typography>
           </Link>
           <Link to="/">
@@ -61,7 +61,8 @@ function NavBar() {
                 color: "inherit",
                 textDecoration: "none",
               }}>
-              MOVIE-DB
+              
+              <img src="../../logo.svg" alt="logo" style={{width:"100%", height:"auto"}}/>
             </Typography>
           </Link>
           <Box
@@ -103,7 +104,17 @@ function NavBar() {
               </MenuItem>
               <MenuItem onClick={handleCloseNavMenu}>
                 <Typography textAlign="center">
-                  <Link to="/details">Details</Link>
+                  <Link to="/movies">Movies</Link>
+                </Typography>
+              </MenuItem>
+              <MenuItem onClick={handleCloseNavMenu}>
+                <Typography textAlign="center">
+                  <Link to="/tv-shows">Tv shows</Link>
+                </Typography>
+              </MenuItem>
+              <MenuItem onClick={handleCloseNavMenu}>
+                <Typography textAlign="center">
+                  <Link to="/celebs">Celebs</Link>
                 </Typography>
               </MenuItem>
             </Menu>
@@ -127,7 +138,7 @@ function NavBar() {
                 Home
               </Button>
             </Link>
-            <Link to="/details">
+            <Link to="/movies">
               <Button
                 onClick={handleCloseNavMenu}
                 sx={{
@@ -136,7 +147,31 @@ function NavBar() {
                   display: "block",
                   fontSize: "1rem",
                 }}>
-                Details
+                Movies
+              </Button>
+            </Link>
+            <Link to="/tv-shows">
+              <Button
+                onClick={handleCloseNavMenu}
+                sx={{
+                  my: 2,
+                  color: "white",
+                  display: "block",
+                  fontSize: "1rem",
+                }}>
+                TV Shows
+              </Button>
+            </Link>
+            <Link to="/celebs">
+              <Button
+                onClick={handleCloseNavMenu}
+                sx={{
+                  my: 2,
+                  color: "white",
+                  display: "block",
+                  fontSize: "1rem",
+                }}>
+                Celebs
               </Button>
             </Link>
           </Box>

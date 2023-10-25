@@ -1,4 +1,6 @@
 import { useParams } from "react-router-dom";
+import {runTimeFormat, dateFormate} from "../utils/dataFormat"
+
 import useGetMovies from "../hooks/useGetMovies";
 import Loader from "../components/Loader";
 import Container from "@mui/material/Container";
@@ -7,18 +9,6 @@ import Grid from "@mui/material/Grid";
 const Details = () => {
   const { media_type, id } = useParams();
   const [movieData, loading, Error] = useGetMovies("details", media_type, id);
-
-  const runTimeFormat = (time) => {
-    let hrs = Math.floor(time / 60);
-    let mins = time % 60;
-
-    return `${hrs}h ${mins}min`;
-  };
-
-  const dateFormate = (date) => {
-    let dateArray = new Date(date).toString().split(" ");
-    return `${dateArray[1]} ${dateArray[2]}, ${dateArray[3]}`;
-  };
 
   return (
     <>
@@ -44,6 +34,11 @@ const Details = () => {
                 {movieData.name && (
                   <span style={{ marginLeft: "1rem", fontSize: "1.2rem" }}>
                     "{movieData.name}"
+                  </span>
+                )}
+                {movieData.title && (
+                  <span style={{ marginLeft: "1rem", fontSize: "1.2rem" }}>
+                    "{movieData.title}"
                   </span>
                 )}
               </h2>

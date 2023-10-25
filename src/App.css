@@ -17,6 +17,7 @@ a {
   text-decoration: none !important;
 }
 
+
 .img-hover-zoom {
   height: 30rem;
   overflow: hidden;
@@ -30,12 +31,26 @@ a {
   transform: scale(1.1);
 }
 
+.search-wrapper{
+  padding: 4rem 0;
+}
+
 .backDrop-img-overlay {
   position: absolute;
   top: 0;
   left: 0;
   z-index: -100;
   filter: brightness(40%);
+}
+
+.movie-rating-wrapper{
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  color: white;
+  background-color: #0288d1;
 }
 
 @media (min-width: 1441px) {
