@@ -1,5 +1,6 @@
 import * as React from "react";
 import ImageListItemBar from "@mui/material/ImageListItemBar";
+import { Link } from "react-router-dom";
 
 const Movie = ({ movieItem }) => {
   return (
@@ -8,13 +9,19 @@ const Movie = ({ movieItem }) => {
         srcSet={`https://image.tmdb.org/t/p/w500${movieItem.poster_path}?w=248&fit=crop&auto=format&dpr=2 2x`}
         src={`https://image.tmdb.org/t/p/w500${movieItem.poster_path}?w=248&fit=crop&auto=format`}
         alt={movieItem.title}
-        loading="lazy"
-      />
+        loading="lazy"></img>
       <ImageListItemBar
         title={movieItem.title || movieItem.name}
-        subtitle={<span style={{fontWeight:"normal"}}>{movieItem.media_type}</span>}
+        subtitle={
+          <span style={{ fontWeight: "normal" }}>{movieItem.media_type}</span>
+        }
         position="below"
-        sx={{fontWeight:"bold", marginTop:"1rem", textAlign:"center", textTransform:"uppercase"}}
+        sx={{
+          fontWeight: "bold",
+          marginTop: "1rem",
+          textAlign: "center",
+          textTransform: "uppercase",
+        }}
       />
     </>
   );

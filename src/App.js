@@ -15,7 +15,7 @@ function App() {
 
     <Routes>
       <Route path='' Component={Home}/>
-      <Route path='/details' Component={Details}/>
+      <Route path='/details/:media_type/:id' Component={Details}/>
     </Routes>
     </Router>
   );

@@ -2,7 +2,6 @@
   text-align: center;
 }
 
-
 .App-header {
   min-height: 100vh;
   display: flex;
@@ -13,8 +12,84 @@
   color: white;
 }
 
-a{
-  color: inherit ;
+a {
+  color: inherit;
   text-decoration: none !important;
 }
 
+.img-hover-zoom {
+  height: 30rem;
+  overflow: hidden;
+}
+
+.img-hover-zoom img {
+  transition: transform 0.8s ease;
+}
+
+.img-hover-zoom:hover img {
+  transform: scale(1.1);
+}
+
+.backDrop-img-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -100;
+  filter: brightness(40%);
+}
+
+@media (min-width: 1441px) {
+  .movieDetails-wrapper {
+    padding-top: 15rem;
+    color: white;
+  }
+
+  .movieDetails-wrapper .movie-overview{
+    height: 10rem;
+  }
+}
+
+@media (max-width: 1440px) {
+  .movieDetails-wrapper {
+    padding-top: 6rem;
+    color: white;
+  }
+
+  .movieDetails-wrapper .movie-overview{
+    height: 6rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .movieDetails-wrapper {
+    padding-top: 10rem;
+    color: black;
+  }
+  .movieDetails-wrapper .movie-overview{
+    height: auto;
+  }
+  .movieDetails-wrapper header {
+    color: white;
+  }
+}
+
+@media (max-width: 768px) {
+  .movieDetails-wrapper {
+    padding-top: 5rem;
+    color: black;
+  }
+
+  .movieDetails-wrapper header {
+    color: white;
+  }
+}
+
+@media (max-width: 425px) {
+  .movieDetails-wrapper {
+    padding-top: 2rem;
+    color: black;
+  }
+  .movieDetails-wrapper header {
+    color: black;
+  }
+}
